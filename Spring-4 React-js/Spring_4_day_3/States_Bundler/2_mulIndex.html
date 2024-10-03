@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--here pasting the react-js cdl-->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- babel cdn-->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+    <style>
+        .counter{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .plus-button,
+        .minus-button{
+            color: green;
+            font-size: 1rem;
+            margin: 1rem;
+        }
+        .minus-button{
+            color: red;
+        }
+        .span-value{
+            font-size: 1rem;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"> </div>
+    <script type="text/babel">
+    
+    function Counter(prop){
+    
+        const{index,value}=prop
+        const[count2,setCount]= React.useState(value)
+        // here count2 = 0 where this count2 is a state variable, which is meant that cout2 is overview by React algorithem. 
+        
+      const increment = ()=>{
+        console.log("increse the value")
+        setCount(count2 + 1); // here setCount is incresing the value of count by 1 +
+        console.log(count2)
+      }
+      const decrement =()=>{
+        console.log("decrese the value")
+        setCount(count2 - 1)
+        console.log(count2)
+      }
+        return  <div className="counter">
+                    <button className="plus-button"
+                    onClick={increment}>+ </button>
+                    <span className="span-value">{count2}</span>
+                    <button className="minus-button"
+                    onClick={decrement}>-</button>
+                </div>
+
+
+    }
+// to return the multiple counters..
+    function CounterParent(){
+        return <div>
+                <Counter index={1} value={0} />
+                <Counter index={2} value={5} />
+                <Counter index={3} value={10} />
+                </div>
+
+    }
+    ReactDOM.render(<CounterParent/>, 
+    document.getElementById("root"))
+    console.log(React)
+
+    </script>
+</body>
+</html>

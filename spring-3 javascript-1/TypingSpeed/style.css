@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap");
+
+body {
+    font-family: 'Bree Serif', serif;
+}
+
+.container-Typing {
+    height: 100vh;
+    background-image: linear-gradient(to right, #dac0ff, #f3eaff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.typing-test-container {
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.clock-image {
+    width: 50px;
+    height: 50px;
+}
+
+.heading-typing,
+.ouput {
+    color: #690cb0;
+}
+
+.paragraph-typing {
+    color: #3e4c59;
+}
+
+.submit_buttton {
+    color: #ffffff;
+}
+
+.reset_button {
+    color: #323f4b;
+    background-color: white;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+#quoteDisplay {
+    margin-bottom: 15px;
+}

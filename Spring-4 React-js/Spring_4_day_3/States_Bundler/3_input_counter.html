@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3rd on</title>
+    <!-- React and Babel CDN -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <style>
+        .counter {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+        .plus-button, .minus-button {
+            color: green;
+            font-size: 1rem;
+            margin: 1rem;
+        }
+        .minus-button {
+            color: red;
+        }
+        .span-value {
+            font-size: 1rem;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .button-card {
+            padding: 1rem;
+        }
+        .button {
+            margin: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        function InputCounter() {
+            const [count, setCount] = React.useState(0);
+            const [inputValue, setInputValue] = React.useState("");
+
+            const increment = () => {
+                setCount(count + 1);
+            }
+
+            const decrement = () => {
+                setCount(count - 1);
+            }
+
+            const handleInputChange = (event) => {
+                // to  set the vlaue and to view on the window 
+                setInputValue(event.target.value);
+            }
+
+            const setCounter = () => {
+                const value = parseInt(inputValue);
+                if (!isNaN(value)) {
+                    setCount(value);
+                }
+            }
+
+            return (
+                <div className="counter">
+                    <div className="inputcard">
+                        <input 
+                            type="text" 
+                            value={inputValue} 
+                            onChange={handleInputChange} 
+                            placeholder="Enter a number" 
+                        />
+                        <button onClick={setCounter}>Set</button>
+                    </div>
+                    <div className="button-card">
+                        <button onClick={increment} className="button"> + </button> 
+                        <span>{count}</span>
+                        <button onClick={decrement} className="button"> - </button>
+                    </div>
+                </div>
+            );
+        }
+
+        ReactDOM.render(<InputCounter />, document.getElementById("root"));
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--this is react example using CDL of react-js-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--here pasting the react-js cdl-->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- babel cdn-->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+
+
+    <!-- <h1>welcome to Indro of React-js</h1> -->
+     <div id="root"></div>
+
+
+    <script type="text/babel">
+        // console.log(React);
+        // console.log( React ,  ReactDOM)
+        function Hello(){
+            return <h1> Welcome to Ritik Home</h1>
+        }
+
+        ReactDOM.render(<Hello/>, document.getElementById("root"))
+    </script>
+    
+</body>
+</html>

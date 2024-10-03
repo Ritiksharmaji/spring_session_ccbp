@@ -1,0 +1,426 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap'); */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #000;
+}
+
+.main {
+    background-image: url('https://dkr0pu7ej5xex.cloudfront.net/wp-content/uploads/2017/04/24135159/Netflix-Background.jpg');
+    height: 50rem;
+    background-size: max(1440px, 100vw);
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.main .box {
+    height: 50rem;
+    opacity: 0.69;
+    background-color: #000;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 75vw;
+    height: 62px;
+    margin: auto;
+    padding-top: 15px;
+    position: relative;
+    z-index: 10;
+}
+
+.nav span img {
+    width: 150px;
+}
+
+.nav div {
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    margin-left: 20px;
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-red-sm {
+    background-color: #e50914;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center; /* Align content at the bottom */
+  align-items: center; /* Center content horizontally */
+}
+
+.hero {
+  font-family: "Martel Sans", sans-serif;
+  display: flex;
+  width: 60%;
+  height: calc(100% - 77px);
+  color: #fff;
+  flex-direction: column;
+  justify-content: center; /* Ensure content is at the bottom within .hero */
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center the text content */
+  padding-bottom: 20px; /* Add padding if needed */
+}
+
+
+.first {
+    padding-top: 3rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.first-card-text {
+    display: flex;
+    justify-content: space-between;
+}
+
+.first-card-images {
+    display: flex;
+    justify-content: space-between;
+}
+
+.separation {
+    height: 5px;
+    /* Thickness of the line */
+    background-color: #544141;
+    /* Color of the line (matching Netflix's primary color) */
+    width: 100%;
+    /* Full width */
+    
+    /* Vertical spacing */
+}
+.separation not .footer-class{
+    margin-bottom: 1rem;
+}
+
+.second,
+.third,
+.forth {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.faq {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.faq-box {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.faq-box li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+
+.faq-box li span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.faq-box li svg {
+    width: 24px;
+    height: 24px;
+    color: #fff;
+    /* Adjust the color if needed */
+    vertical-align: middle;
+    /* Aligns the icon vertically with the text */
+}
+
+.icon {
+    width: 24px;
+    /* Adjust this value to change the size */
+    height: 24px;
+    /* Adjust this value to change the size */
+    color: #fff;
+    /* Change the color as needed */
+    vertical-align: middle;
+    /* Align the icon vertically with the text */
+}
+
+.hero-end,
+.hero-buttons {
+    padding: 1rem;
+
+}
+
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    /* Center the items vertically */
+    gap: 10px;
+    /* Space between the input and button */
+}
+
+.text-hero-end {
+    flex: 1;
+    /* Allow the input to take up available space */
+    min-width: 300px;
+    /* Set a maximum width if needed */
+    height: 40px;
+    /* Set the desired height */
+    padding: 10px;
+    /* Adjust padding as needed */
+    font-size: 16px;
+    /* Set font size for better visibility */
+    border-radius: 5px;
+    /* Optional: add rounded corners */
+    border: 1px solid #ccc;
+    /* Optional: add border */
+    box-sizing: border-box;
+    /* Ensure padding is included in the width and height */
+}
+
+.red-btn {
+    padding: 15px 25px;
+    /* Adjust padding to fit the button */
+    font-size: 16px;
+    /* Set the font size for the button */
+    border-radius: 5px;
+    /* Optional: add rounded corners */
+    cursor: pointer;
+    /* Make the button clickable */
+    background-color: #e50914;
+    /* Red background */
+    color: #fff;
+    /* White text color */
+    border: none;
+    /* Remove border */
+}
+
+
+.footer-class {
+    background-color: #141414;
+    color: #737373;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-class .footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.footer-class .footer-item {
+    margin: 10px;
+    text-align: left;
+    min-width: 200px;
+}
+
+.footer-class .footer-item a {
+    color: #737373;
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-class .footer-item a:hover {
+    text-decoration: underline;
+}
+
+.footer-class .footer-span {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.footer-class .footer-span a {
+    color: #737373;
+    text-decoration: none;
+}
+
+.footer-class .footer-span a:hover {
+    text-decoration: underline;
+}
+
+.footer-class .final {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-class .btn.last-btn {
+    background-color: #141414;
+    border: 1px solid #737373;
+    color: #737373;
+    padding: 5px;
+    margin: 0 10px;
+}
+
+.footer-class .btn.last-btn option {
+    background-color: #141414;
+    color: #737373;
+}
+
+.footer-class span {
+    display: block;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #737373;
+    font-weight: lighter;
+}
+
+.text-card-tv-smart{
+     font-family: Roboto;
+     font-size: 1rem;
+}
+
+.text-card{
+    font-family: Roboto;
+    font-size: 2rem;
+}
+.typewriter {
+  font-size: 2em;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  padding: 10px;
+}
+
+.typewriter-content {
+  display: inline-block; /* Ensures that the text displays inline without gaps */
+  white-space: nowrap;  /* Prevents breaking of lines within the span */
+}
+
+.sec-img{
+    width: 50%;
+    position: relative;
+}
+
+ .second, .third, .forth {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 400px; /* Adjust this height as per your design */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.text-card {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.sec-img {
+    flex: 1;
+    text-align: center;
+}
+
+.sec-img img, .sec-img video {
+    max-width: 100%;
+    height: auto;
+}
+
+.card-container-tv{
+    width: 50%;
+    
+}
+
+.first, .second, .third, .forth {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 400px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.text-card {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.sec-img {
+    flex: 1;
+    text-align: center;
+}
+
+.sec-img img, .sec-img video {
+    max-width: 100%;
+    height: auto;
+}
+
+.footer-class {
+    padding: 20px;
+    text-align: center;
+    font-size: 13px;
+    background-color: #141414;
+}
+
+.footer-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.footer-item a {
+    color: #757575;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.footer-item a:hover {
+    text-decoration: underline;
+}
+
+.footer-class span, .footer-class a {
+    display: block;
+    margin: 10px 0;
+}
+.span-text{
+    width: 50%;
+}
+.text-card-tv-smart{
+    display: flex;
+    justify-content: space-between;
+}
+.first-card{
+    display: flex;
+    justify-content: space-between;
+}
+.card-contianer-tv{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 2rem;
+}

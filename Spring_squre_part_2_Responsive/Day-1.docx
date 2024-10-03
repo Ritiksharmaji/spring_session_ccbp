@@ -1,0 +1,143 @@
+
+                                session--topices
+---------------------
+We covered the following things in this unit
+1) Introduction to Bootstrap
+
+2) Setting up bootstrap in a project
+
+3) Using Bootstrap Grid System for responsive layouts
+--------------------------------------------------------------  
+Q why we have divied 12 columns for a row in bootstrap
+---------
+and- 
+In Bootstrap, the grid system is based on a 12-column layout for each row. 
+This system allows for a flexible and responsive design, 
+where you can define how many columns a particular element should span across on different screen sizes. 
+Here's why 12 columns are used:
+----------------------------------------------------------------
+Q- z-index property ??
+ans---
+The z-index property in CSS controls the stacking order of elements on the web page along the z-axis (the axis that runs perpendicular to the screen). This property determines which elements appear on top of or below others when they overlap.
+
+Key Points About z-index:
+Default Behavior:
+
+By default, HTML elements are stacked in the order they appear in the DOM (Document Object Model). Later elements are stacked on top of earlier ones.
+Without any z-index applied, the stacking order follows the document's flow.
+Stacking Context:
+
+A stacking context is formed when an element is positioned (position: relative, absolute, fixed, or sticky) and has a z-index value other than auto. A stacking context can also be created by certain CSS properties like opacity less than 1, transform, filter, etc.
+Elements with a higher z-index within the same stacking context will be stacked on top of those with a lower z-index.
+How z-index Works:
+
+The z-index value can be a positive integer, negative integer, or zero.
+Elements with a higher z-index are placed in front of elements with a lower z-index.
+If two elements have the same z-index, the one that appears later in the HTML will be placed on top.
+
+
+        .parent {
+        position: relative; /* Establishes a new stacking context */
+        }
+
+        .child1 {
+        position: absolute;
+        z-index: 10; /* This element will appear on top */
+        }
+
+        .child2 {
+        position: absolute;
+        z-index: 5; /* This element will appear below child1 */
+        }
+In this example, child1 will be stacked above child2 because it has a higher z-index.
+------------------------------------------------Important Notes:----------------------------------------
+Positioning: The z-index property only works on elements that have a position value of relative, absolute, fixed, or sticky. If an element has position: static (which is the default), z-index will not apply.
+
+Negative z-index: A negative z-index places an element behind others. However, it can be tricky because it may cause the element to fall behind its containing stacking context or parent element, potentially making it invisible or inaccessible.
+
+Nested Stacking Contexts: When an element creates a stacking context, its children are stacked within that context. They cannot escape to affect the stacking order of elements outside their parent's stacking context.
+
+----------------------------------Common Use Cases:-----------------------------------------
+Overlapping Elements: z-index is often used to control the stacking order when elements overlap, such as dropdown menus, modals, tooltips, and banners.
+
+Layered Effects: It can be used for layered effects, such as placing text or images on top of a background.
+
+---download the css extension called - css piper for browser supports
+-----------------------------------------------------------------------------------------------------------------------
+                        session -2 day-2 topices are
+
+We covered the following things in this unit
+1) Explore key Bootstrap components like Navbar, buttons, forms, and cards, and learn how to implement them in your projects.
+2) Go beyond the basics by learning how to customize Bootstrap's styles with your own custom CSS, giving your projects a unique look and feel.
+-------------------------------------
+Q-1: 
+
+
+
+
+
+------------------------------------------------session-2-day-4 topices are --------------------------------------------
+We covered the following things in this unit
+1) Introduction to Tailwind CSS
+2) Setting up Tailwind CSS in a project
+3) Applying utility classes to style elements
+----------------------------------------------------
+Q-1: 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------session-2 day-6 topices are----------------------------
+
+We covered the following things in this unit
+1) Hosting webpages using Github pages
+2) Hosting webpages using Netlify
+
+a) idea for portfolia
+        i) Brittany chaiang
+        ii)adhamdannaway.com
+        iii)codepen.io
+b) go to Netlify website and register and login
+c)
+
+2)by githube 
+-----------
+a)create a new responsive called hostingResponsiveWebsite
+b) follow the all the basic commands of git like init(), and others to push your project
+c) ater pushing your project on githube then go to setting option of your responsive 
+d)after cliking on setting button of your responsive see the option in left side called pages and clik on that 
+e) 
+        Branch
+GitHub Pages is currently disabled. Select a source below to enable GitHub Pages for this repository 
+below it Select the main Branch and  root folder.
+f)after that click on save button then 
+g) in Build and deployment -> Source clik on first option then your project will live.

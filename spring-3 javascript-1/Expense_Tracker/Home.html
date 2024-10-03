@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom Styles if needed */
+    </style>
+</head>
+
+<body class="bg-gray-100 font-sans">
+    <div class="max-w-4xl mx-auto p-8 bg-white shadow-lg rounded-lg">
+        <h1 class="text-3xl font-bold text-blue-600 mb-6 text-center">Expense Tracker</h1>
+        
+        <form id="expense-form" class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <input type="text" id="expense-name" placeholder="Expense Name"
+                    class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                <input type="number" id="expense-amount" placeholder="Amount"
+                    class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                <select id="expense-category"
+                    class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                    <option value="" disabled selected>Select Category</option>
+                    <option value="Food">Food</option>
+                    <option value="Transport">Transport</option>
+                    <option value="Entertainment">Entertainment</option>
+                    <option value="Other">Other</option>
+                </select>
+                <input type="date" id="expense-date"
+                    class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+            </div>
+            <button type="submit"
+                class="w-full py-3 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500">
+                Add Expense
+            </button>
+        </form>
+
+        <div class="mt-8">
+            <div class="overflow-x-auto">
+                <table class="w-full table-auto border-collapse bg-white shadow-md rounded-lg">
+                    <thead>
+                        <tr class="bg-blue-600 text-white">
+                            <th class="p-3">Expense Name</th>
+                            <th class="p-3">Amount</th>
+                            <th class="p-3">Category</th>
+                            <th class="p-3">Date</th>
+                            <th class="p-3">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="expense-list" class="text-gray-700">
+                        <!-- Expense items will be appended here -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="text-right mt-4 text-xl font-bold text-blue-600">
+                <strong>Total:</strong> $<span id="total-amount">0</span>
+            </div>
+        </div>
+
+        <div class="mt-8 flex justify-end items-center space-x-4">
+            <label for="filter-category" class="text-gray-700">Filter by Category:</label>
+            <select id="filter-category"
+                class="p-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                <option value="All">All</option>
+                <option value="Food">Food</option>
+                <option value="Transport">Transport</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+    </div>
+
+    <script src="HomeJs.js"></script>
+</body>
+
+</html>
