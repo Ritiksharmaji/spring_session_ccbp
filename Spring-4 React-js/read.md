@@ -87,3 +87,88 @@ step-2:we need to figure out where to add dynamic nature to webpage i.e, adding 
 
 ![alt text](image-8.png)
 ![alt text](image-9.png)
+
+--------------------------------------------------------------------------------------------------
+spring_4_day-6 : for router and useeffect concetp
+
+step-1: npm create vite@latest
+step-2:   cd 1useEffect
+          npm install
+          npm run dev
+step-3; 
+
+--------------------
+useEffect is used to call a function onec the render catually happped
+ex--
+![useEffect main.jsx](image-10.png)
+![useEffect app.jsx](image-11.png)
+output-
+![useEffect-output during fetch](image-12.png)
+![useEffect-output during fetch](image-13.png)
+![useEffect-ouput after fetch data](image-14.png)
+![accessing data from that api](image-15.png)
+![ouput for acceessing data ](image-16.png)
+
+note--
+focess this error 
+![error during use ofasync with useEffect ](image-17.png)
+we should not usse the async with useEffect beause async return the promises and useEffect must not return anything besides a function, which is used for clean-up. so for that we we use a function which have this async to fetch the data. 
+solve-
+![alt text](image-18.png)
+![alt text](image-19.png)
+--------------------
+-----------------useEffect() usecase-1: with empty dependecy array like- useEffect(func,[])--------------------------------------
+so,
+![alt text](image-20.png)
+![alt text](image-21.png)
+--output---
+![alt text](image-22.png)
+![alt text](image-23.png)
+
+by observing output we can say that if the useEffect has empty array dependecy then that useEffect will call one time after once render not after each render.
+-----------------useEffect() usecase-2: with empty dependecy array like- useEffect(func)---------------------
+![alt text](image-24.png)
+--output--
+![alt text](image-25.png)
+![alt text](image-26.png)
+so by observing the output we can say that if we have useEffect without  empty array then that useEffect will call each time after the render.
+
+-----------------useEffect() usecase-3: with  dependecy array like- useEffect(func,dependecy_aarray)---------------------
+![alt text](image-27.png)
+![alt text](image-28.png)
+![alt text](image-29.png)
+--output---
+![alt text](image-30.png)
+![alt text](image-31.png)
+now after clcik on ad-task button 
+![alt text](image-32.png)
+here after click on add-task button that useEffect has call beausce in that depenecy array we mantain the taskList to change its state.
+now see to inpput fileds
+code image--
+![alt text](image-33.png)
+--output--
+![alt text](image-34.png)
+![alt text](image-35.png)
+
+-----------------useEffect() usecase-4: with callback inside callback cleanUp functiion and dependecy array like- useEffect(func)---------------
+code--
+![alt text](image-36.png)
+![alt text](image-37.png)
+--output---
+![alt text](image-38.png)
+then after clcik on add task
+![alt text](image-39.png)
+![alt text](image-40.png)
+![alt text](<Screenshot 2024-10-07 233344.png>)
+
+----------now routrs----------------------------------------
+npm create vite@latest
+cd 2nd_1Routing
+  npm install
+  npm run dev
+---
+react-router---> 
+1) for the 1st render we get a bundle with UI + Data 
+2) in single page application , no reload should take place  why?, beacuse as reload means getting both UI + Data thats why react works in a way where response only have Data comming from server.
+3) when our website got relaod then all the data related to that website will stored in router and based on url it will render, that data.
+4) install the npm install react-router-dom
