@@ -33,7 +33,7 @@ ex- <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
 
 --------------------------------------------------------------------------------------------------------------------------
-spring_4_day_4
+## ----------------------------spring_4_day_4-------------------------------------
 ![code image](image-1.png)
 ![to show the comming error](image.png)
 ![change code to ovide the that error](image-2.png)
@@ -89,7 +89,18 @@ step-2:we need to figure out where to add dynamic nature to webpage i.e, adding 
 ![alt text](image-9.png)
 
 --------------------------------------------------------------------------------------------------
-spring_4_day-6 : for router and useeffect concetp
+## --------------------spring_4_day_5 ------------------------------------------------------------
+Q - what is incese in scale for components
+-> extension for react-js in vs code is --- ES7 + React/Redux/React-Native snippets
+---------------------- note------------------------------------
+in React when ever a parent components want to communicate with child components then that will happped by props 
+  but
+  when child components wnat to communicate with parent then that will happped by the function(callback)
+
+![alt text](IMG_20241012_165528[1].jpg)
+![alt text](IMG_20241012_165559[1].jpg)
+
+## -----------------------spring_4_day-6 : for router and useeffect concetp-------------------------------------
 
 step-1: npm create vite@latest
 step-2:   cd 1useEffect
@@ -98,6 +109,9 @@ step-2:   cd 1useEffect
 step-3; 
 
 --------------------
+![alt text](IMG_20241012_165606[1].jpg)
+![alt text](IMG_20241012_165617[1].jpg)
+![alt text](IMG_20241012_165627[1].jpg)
 useEffect is used to call a function onec the render catually happped
 ex--
 ![useEffect main.jsx](image-10.png)
@@ -172,3 +186,72 @@ react-router--->
 2) in single page application , no reload should take place  why?, beacuse as reload means getting both UI + Data thats why react works in a way where response only have Data comming from server.
 3) when our website got relaod then all the data related to that website will stored in router and based on url it will render, that data.
 4) install the npm install react-router-dom
+
+## ---------------------------------------spring_4_day_7: for router concept-----------------------------
+1) npm create vite@latest
+2) 3rd_2Routing
+3)  cd 3rd_2Routing
+  npm install
+  npm run dev
+4)  npm install react-router-dom
+
+## --------- use this website to use the apis ---------------
+![alt text](image-64.png)
+----------------------------------------------------------------
+5) six types of Routing 
+   1) Normal Routing
+   2) Link Routing
+   3) Dynamic Routing/ emplate Routing
+   4) Nested Routing
+   5) custom Routing
+   6) Redirecting Routing
+
+6) Link Routing--> when ever we yse the Link tag then reload doesn't happend when we go from one page to other using this Link tag.   
+![spring_4_day_7](image-41.png) 
+![alt text](image-42.png)
+![alt text](image-43.png)
+--output----
+![alt text](image-44.png)
+![alt text](image-45.png)
+![alt text](image-46.png)
+
+ 1) Dynamic Routing/ emplate Routing---> it is used to create a dynatic route path 
+   1) useParams()--> Returns an object of key/value pairs of the dynamic params from the current URL that were matched by the route path
+   ![alt text](image-47.png)
+   ![alt text](image-48.png)
+-----------------------------------
+   ![alt text](image-49.png)
+   ![alt text](image-50.png)
+----------------------------------
+![alt text](image-51.png)
+--output---
+![alt text](image-52.png)
+![alt text](image-53.png)
+---------------------------------------------------------
+Q- how to make our route redirect to some link or some page autometically.
+ans--> 
+![alt text](image-54.png)
+to 
+![alt text](image-55.png)
+ans--> using the six type of Rotuting called as Redirecting Routing 
+
+![alt text](image-58.png)
+--output----
+![alt text](image-56.png)
+![alt text](image-57.png)
+---------------------------------------------------------------
+problem--
+ ![alt text](image-59.png) to fix this type of proble we are using the  4) Nested Routing
+ examplee--
+ ![alt text](image-60.png)
+ -------------------------
+ ![alt text](image-61.png)
+ ![alt text](image-62.png)
+ ![alt text](image-63.png)
+ 
+ 
+
+ -----------------
+ ![alt text](image-65.png)
+## ------------------------------------------------------------------------------------------------------------------
+
