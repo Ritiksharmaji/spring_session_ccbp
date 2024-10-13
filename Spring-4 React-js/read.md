@@ -254,4 +254,41 @@ problem--
  -----------------
  ![alt text](image-65.png)
 ## ------------------------------------------------------------------------------------------------------------------
+## ------------------Spring_4_day_8 continue the project-----------------------------------------------------------
+1) npm create vite@latest
+  3rd_3Routing
+  cd 3rd_3Routing
+  npm install
+  npm install react-router-dom
+  npm run dev
+2) copy all the code of Spring_4_daay_7 and then continuneee
+3)  go to thie website for style https://mui.com/material-ui/
+4)  go to get stated and click on installation and copy the command and paste in terminal.
+5)  ![alt text](image-66.png)
+6)  ![alt text](image-67.png)
+7)  npm install @mui/material @emotion/react @emotion/styled
+8)  ![alt text](image-68.png) copy the and paste in code of Home
+9)  ![alt text](image-69.png)
+10) it is comming error so comment it 
+11) ![alt text](image-70.png)
+12) to fix this error again  in terimal  npm install @mui/icons-material
+13) ![alt text](image-71.png)
+14) ![alt text](image-72.png)
+15) ![alt text](image-73.png)
+16) ![alt text](image-74.png)
+17) ![alt text](image-75.png)
+18) ![alt text](image-76.png)
+19) now to filter the itmes based on category 
+20) this are the apis ![alt text](image-77.png) , ![alt text](image-78.png)
+21) now to fetch the data based on category we have to write the code using the useEffect().
+22) ![alt text](image-79.png)
+23) ![alt text](image-80.png)
+24) ![alt text](image-81.png)
+25) -------output------------------
+26) ![alt text](image-82.png)
+27) ![alt text](image-83.png)
+28) ![alt text](image-84.png)
+29) ![alt text](image-85.png)
+--------------------
+
 
