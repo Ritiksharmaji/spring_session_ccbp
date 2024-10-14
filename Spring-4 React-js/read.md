@@ -291,4 +291,74 @@ problem--
 29) ![alt text](image-85.png)
 --------------------
 
+## -------------------------------------Spring_4_day_9------------------------------------------------------------------
+1) npm create vite@latest
+  3rd_3Routing
+  cd 3rd_4Routing
+  npm install
+  npm install react-router-dom
+  npm install @mui/material @emotion/react @emotion/styled
+  npm install @mui/icons-material 
+  npm run dev
+2) copy all the code of Spring_4_daay_8 and then continune
+3) now we are going to do refectring the our code--> means mantaing the code in proper way with respect to file.
+4) create two components 1) Categories.jsx 2)ProductList.jsx 
+5) create a folder as utility and create a file basicOp.js inside that utility
+6) see the codes
+7) Categories.jsx code is 
+8) ![alt text](image-86.png)
+9) ProductList.jsx code is 
+10) ![alt text](image-87.png)
+11) utility->basicOp.js code is 
+12) ![alt text](image-88.png)
+13) ![alt text](image-89.png)
+14) now Home.jsx code is 
+15) ![alt text](image-90.png)
+16) ![alt text](image-91.png)
+17) ![alt text](image-92.png)
+18) output is 
+19) ![alt text](image-93.png)
+20) ![alt text](image-94.png)
+21) ------------------Now we are going to apply the paggination feacture to this project--------------------------------------
+22) now to include the icons in react we can use the react-icons for that follow the below image to include the react-icon first we need to download it using ternimal => npm install react-icons
+23) ![alt text](image-95.png)
+24) now see the codes 
+25) code of Home.jsx file ![alt text](image-96.png) , ![alt text](image-97.png)
+26) code of ProductList.jsx file ![alt text](image-98.png)
+27) code of Category.jsx file ![alt text](image-99.png)
+28) code of utility->basicOp.js file ![alt text](image-100.png),![alt text](image-101.png)
+29) -----------------output-----------------------
+30) ![alt text](image-102.png),![alt text](image-103.png),![alt text](image-104.png)
+31) after this all output there is some few debugging problems are  below..
+32) when we click on parttiular category then that page number is not update as initall -> ![alt text](image-105.png)
+33) intiall we are in first page but when we are searching a product which is not availabe in first page(within four product) then other page product is comming which match the search ![alt text](image-106.png)
+34) now we fix this begging by modify the codes and we also create two files User2.jsx and Cart.jsx
+35) see the code to create and modify the code ![alt text](image-107.png), ![alt text](image-108.png)
+36) now we  are going to fix the debugging see the code.
+37) Home.jsx code is  ![alt text](image-109.png) , ![alt text](image-110.png)
+38) Category.jsx file code is ![alt text](image-111.png) here we are modify the code of Home.jsx and Category.jsx beasus in the home.jsx that input fild are there and in the Category.jsx that all the category are there on click them we are not getting proper output after this all we are getting proper output..
+39) ---- output-----------------------
+40) ![alt text](image-112.png) , ![alt text](image-113.png) , ![alt text](image-114.png)
+41) ![alt text](image-115.png) , ![alt text](image-116.png)
+42) now one more begugging is there when we click on other link like on user or cart after that when we click on again in Home then that product are comming from starting but not from where we click on that other link like if we are in second page of home and we click on cart then again we clik on Home then it will code as first page  that is bed user expereance so to fix that degging we have to apply the concept of 'context'.....
+43)  we know that when two or more child element of same parent element want the a same state-managemt varaible then we keep that state variable in parent element in form of props so that all the child element can access so when child component want a property from parent element and there is long chain between child element to parent element where parent have the state variable to sent it to child it can have a problem called as prop drilling
+44)  Prop drilling in React refers to the process of passing data from a parent component to a deeply nested child component through several intermediary components, even though those intermediary components do not need the data. It can lead to complicated and difficult-to-maintain code when many components are involved.
+45) ## ------------- How to Avoid Prop Drilling------------->
+     ans)React Context API: The Context API allows you to create global variables (context) that can be passed down to any child component without needing to pass props explicitly at every level.
+
+46)  ![alt text](image-117.png) by lokking this image there the parent elemnt is App.jsx and child are navbar.jsx and user.jsx so if the user.jsx need a property then it can direncty access from context api that is gloably access across each compoents.
+47)  now to use the Context in this application we are crating a folder name as contexts and inside it we are creating a file to handle the paddingtion that file is PaginationContext.jsx.
+48)  see the codes with respect to files 
+49)  App.jsx code is ![alt text](image-118.png)
+50)  Home.jsx code is ![alt text](image-119.png) , ![alt text](image-120.png) , ![alt text](image-121.png)
+51) code of PaginationContext.jsx file  ![alt text](image-122.png)
+52) Categories.jsx file code is ![alt text](image-123.png)
+53) code of NavBar.jsx and Productlist.jsx file ![alt text](image-124.png)
+54) -------------OutPut---------------------
+55) ![alt text](image-125.png) , ![alt text](image-126.png) , ![alt text](image-127.png) , ![alt text](image-128.png)
+56) so by above image we can see the proble which was happing that had resolved but that is for also related to pagitation but for categories by lokking the below image you can identify so to resolve it also we need to make the category state variable as glabally using the context variable. ![alt text](image-129.png) , ![alt text](image-130.png) , ![alt text](image-131.png)
+57) 
+
+
+
 

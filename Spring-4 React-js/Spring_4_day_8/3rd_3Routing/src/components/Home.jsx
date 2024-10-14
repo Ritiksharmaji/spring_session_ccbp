@@ -21,9 +21,9 @@ function Home() {
   console.log("home...")
   const[searchTerm, setSearchTerm] = useState('')
   const[products, setProducts] = useState([])
-  // this hook is for sort the items based on price..
+  // this state-managment is for sort the items based on price..
   const[sortDir, setSortDir] = useState(0)
-  // this statemanagment for categories
+  // this state-managment for categories
   const[categories, setCategories] = useState([])
   // this state-managment for identify the current category type of product...
   const[currentCategory, setCurrentCategory] = useState('All Categories');
