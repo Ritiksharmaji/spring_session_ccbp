@@ -1,10 +1,11 @@
 
 import { configureStore } from "@reduxjs/toolkit";
 import CounterSlice from "./CounterSlice";
-
+import UserSlice from "./userSlice";
 const store = configureStore({
     reducer:{
-        counterState:CounterSlice.reducer
+        counterState:CounterSlice.reducer,
+        userState:UserSlice.reducer, // userSlice 
     }
 })
 // here ​​reducer is a identifier which  is used to identify the state varaible which is availbe in slice.
