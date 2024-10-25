@@ -40,7 +40,7 @@
     //1)lets bulid a couter application so when ever you are building
         //anything in react , bulid it in static website form
     
-    //2) in react we can change iems using the state, as React follows
+    //2) in react we can change itms using the state, as React follows
         // the State variable
     
     //3) useState by default gives us the array of items as 1st argument and it gives function as second arg. 
@@ -48,20 +48,20 @@
 
     function Counter(){
         // React.const [count, setcount] = useState();
-        const count = React.useState(0);
+        const count1 = React.useState(0);
         // here useState(0)=0 is initall value of that state variable
-        const[count2,setCount]= React.useState(0)
+        const[count,setCount]= React.useState(0)
         // here count2 = 0 where this count2 is a state variable, which is meant that cout2 is overview by React algorithem. 
         
       const increment = ()=>{
         console.log("increse the value")
-        setCount(count2 + 1); // here setCount is incresing the value of count by 1 +
-        console.log(count2)
+        setCount(count + 1); // here setCount is incresing the value of count by 1 +
+        console.log(count)
       }
       const decrement =()=>{
         console.log("decrese the value")
-        setCount(count2 - 1)
-        console.log(count2)
+        setCount(count - 1)
+        console.log(count)
       }
         return  <div className="counter">
                     <button className="plus-button"

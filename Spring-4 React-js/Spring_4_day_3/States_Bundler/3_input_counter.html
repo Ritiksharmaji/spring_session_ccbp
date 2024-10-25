@@ -76,18 +76,18 @@
                             onChange={handleInputChange} 
                             placeholder="Enter a number" 
                         />
-                        <button onClick={setCounter}>Set</button>
-                    </div>
-                    <div className="button-card">
-                        <button onClick={increment} className="button"> + </button> 
-                        <span>{count}</span>
-                        <button onClick={decrement} className="button"> - </button>
-                    </div>
-                </div>
+         <button onClick={setCounter}>Set</button>
+        </div>
+        <div className="button-card">
+        <button onClick={increment} className="button"> + </button> 
+            <span>{count}</span>
+        <button onClick={decrement} className="button"> - </button>
+         </div>
+     </div>
             );
         }
 
-        ReactDOM.render(<InputCounter />, document.getElementById("root"));
+ReactDOM.render(<InputCounter />, document.getElementById("root"));
     </script>
 </body>
 </html>
