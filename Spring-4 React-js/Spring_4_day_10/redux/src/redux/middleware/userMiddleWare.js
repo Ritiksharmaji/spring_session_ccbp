@@ -1,6 +1,6 @@
 
 import UserSlice from "../userSlice";
-import{useDispatch} from 'react-redux'
+
 
 const action = UserSlice.actions;
 

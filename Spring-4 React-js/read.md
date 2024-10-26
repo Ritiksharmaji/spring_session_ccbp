@@ -1259,28 +1259,38 @@ d) in the useDispatcher() Hook has a funtion called as actions which is used to 
 98) basically till now we have learn that how to access and change the state variable using redux but in that there in only syncrolens we are not using async, so to use the async beause when we deal with access the data from some apis then defenatially we should to the async function for that we will learn that how to access and modify the state-varible of redux in async function.
 99) ## ----------------- redux with async function ------------------------------
 100) ![alt text](<Screenshot 2024-10-15 112044.png>)
-      a) now here the middleware goes to fetch the apis so, middleware is used to fetch the datas form apis and then
-      apis will respond to this middleware 
-      b) after getting the data from apis the middleware contact to slice element.
-      c) now we are going to implement in code with aysc so for any redux the first thing to 
-         1) create is a slice
-         2) create store
-         3) create Middleware
-         4)
-      d) here the Redux is the core part and outer to it redux toolket is there which provides this all funcnality like createSlice, and other.  
+  * a) now here the middleware goes to fetch the apis so, middleware is used to fetch the datas form apis and then apis will respond to this middleware 
+  * b) after getting the data from apis the middleware contact to slice element.
+  * c) now we are going to implement in code with aysc so for any redux the first thing to 
+     1) create is a slice
+     2) create store
+     3) create Middleware
+     4) create redux(userRedux)
+     5) 
+  * d) here the Redux is the core part and outer to it redux toolket is there which provides this all funcnality like createSlice, and other.  
 101) now that user.jsx code we will implment using the redux for that we have to again three entity of redux for this user 
      1)   userSlice.jsx code is ![alt text](image-153.png)
-
-NOTE-- here the payload is nothing but that data which is fetch by middleware so middleware will fetch a data and  it shore that data  using the action so that data is called as payload, so in middleware we are doing two thing getting the data from apis and storing that data to in form of payload. then in slice we are accessing this payload to store in state variable.
-     2)   create userRedux.js that is redux for user this should be the first step beasue it is a reduxComponent which will access and modify the state variable, to create it copy the code of User.jsx and make some change to it, beause in that use we are using the synch and now are going to use the aysnc. 
-     3)   now create a middleware folder to mantain all the middleware for this redux beasue this middleware are used to get the data from apis
-     4)  ![alt text](image-154.png) 
-     5)  store.js code  ![alt text](image-155.png) 
-     6)  ![alt text](image-156.png)
-     7)  App.jsx ![alt text](image-157.png)
-     8)  main.jsx code is ![alt text](image-158.png)
-     9)  ----------output --------------------
-     10) ![alt text](image-159.png)
+     2) ----------------------  NOTE---------------------------------------
+     3)   here the payload is nothing but that data which is fetch by middleware so middleware will fetch a data and  it shore that data  using the action so that data is called as payload, so in middleware we are doing two thing getting the data from apis and storing that data to in form of payload. then in slice we are accessing this payload to store in state variable.
+     4)   to access data from slice to middleware also middleware should to use the useDispatch() Hook only and by using the action object  middleware can access data from slice beacuse in reducers object what ever object are there each and ever one is a reducer (UserLoading,usererror,userdata) and to access them we need to use the action only. not only middle ware the compoent should also use the action to access the state-varible.
+     5)   -------------------------------------------------------------------------------------------------------------------------------  
+     6)  store.js code  ![alt text](image-155.png)  this is the second step for redux. 
+     7)  create the Provider and so that wrap it into single entity so that all the compoent can access and interact with state-varaible for that we are implement it into main.jsx file, which is third step. and final step now our redux  has created.
+     8)  main.jsx code is ![alt text](image-158.png) 
+     9)  ----------- NoW creating the Redux has done then we can work with  our component and based on component state-required we can modify the code of all this three step.----------------------------------
+     10) now based on compoent we can create either middleware or not but if we want to fetch some data from apis then it is better and good way to use the middleware so,
+     11) now create a middleware folder to mantain all the middleware for this redux beasue this middleware are used to get the data from apis
+     12) ![alt text](image-154.png) 
+     13)  here in the middleware code as we as writing in note that to access the state from slice middleware should to use the action so here it has used.
+     14)  dispatch(action.userData(userData)); is used to set the data which is fetch by middleware to state variable .
+     15)  before to create middleware we have to store the state-varaible to store so we are going to create store file which will store the state-variable and userRedux can contact to it for access the state-variable. and also before creating Compoent beause based on that componet this middleware will act , create the middleware create the component of redux(userRedux).
+     16)  in middleware we have a argument as dispatch even those while calling it we are not sending any argu.. so that disptch is created by redux beause when ever we are creating a middleware then middleware will get the dispatch from redux autometically.
+     17) create userRedux.js that is redux for user it is a reduxComponent which will access and modify the state variable, to create it copy the code of User.jsx and make some change to it, beause in that code  we are using the synch and now are going to use the aysnc.
+     18) ![alt text](image-156.png)
+     19) App.jsx ![alt text](image-157.png)
+     20) 
+     21) ----------output --------------------
+     22) ![alt text](image-159.png)
 102) --------------------------------------------------------------------------
 103) 
 
