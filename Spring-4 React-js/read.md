@@ -1271,7 +1271,7 @@ d) in the useDispatcher() Hook has a funtion called as actions which is used to 
 101) now that user.jsx code we will implment using the redux for that we have to again three entity of redux for this user 
      1)   userSlice.jsx code is ![alt text](image-153.png)
 
-## - here the payload is nothing but that data which is fetch by middleware so middleware will fetch a data and  it shore that data  using the action so that data is called as payload, so in middleware we are doing two thing getting the data from apis and storing that data to in form of payload. then in slice we are accessing this payload to store in state variable.
+NOTE-- here the payload is nothing but that data which is fetch by middleware so middleware will fetch a data and  it shore that data  using the action so that data is called as payload, so in middleware we are doing two thing getting the data from apis and storing that data to in form of payload. then in slice we are accessing this payload to store in state variable.
      2)   create userRedux.js that is redux for user this should be the first step beasue it is a reduxComponent which will access and modify the state variable, to create it copy the code of User.jsx and make some change to it, beause in that use we are using the synch and now are going to use the aysnc. 
      3)   now create a middleware folder to mantain all the middleware for this redux beasue this middleware are used to get the data from apis
      4)  ![alt text](image-154.png) 
