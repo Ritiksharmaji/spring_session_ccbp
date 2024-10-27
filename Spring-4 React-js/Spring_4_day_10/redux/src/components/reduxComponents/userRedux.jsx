@@ -6,6 +6,7 @@ function UserRedux() {
     const { loading, error, user } = useSelector((store) => store.userState);
 
     const dispatch = useDispatch();
+    
     useEffect(function(){
         dispatch(fetchUserMiddleWare)
     },[])
