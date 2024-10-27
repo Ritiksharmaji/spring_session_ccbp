@@ -823,27 +823,45 @@ State management libraries like Redux are invaluable for **large or complex Reac
     
 ## ------------------------------------Spring_4_day_11 ----------------------------------------------------------------------------------------
 92) ## Principles of Redux
-   * it should be Single Source of the Truth ----> we can only have one store in whole app, but we can have multiple slices
-    * State is Read only ----> when you want to update the state, then we have to dispatch a "action" on object that describes what happend
-    * Changes are made by pure functions ----> To specify how to change a state action is passed to the reducer function
-    * 
+   1) * it should be Single Source of the Truth ----> we can only have one store in whole app, but we can have multiple slices
+    2) * State is Read only ----> when you want to update the state, then we have to dispatch a "action" on object that describes what happend
+    3) * Changes are made by pure functions ----> To specify how to change a state action is passed to the reducer function
+
 93) Impure fn -> 
-   * they will not give same result for same input
-   * it will input from outer scope
+   1) * they will not give same result for same input
+   2) * it will input from outer scope
    exaple-> ![alt text](image-147.png) , ![alt text](image-148.png)
 94) Pure fn ->  
     1)  give same output for same input
     3)  all its variables: doesnt changes any outer variable(produce side effect)  
     4)  example-> fn(x)=x**2+2 => if x = 4 => fn(4) = (4)**2 + 2 => 16 + 2 = 18
+
 95) create a file inside the name as User.jsx and go to jsonPlaceholder and use the api of user
 96) ![alt text](image-149.png) , ![alt text](image-150.png)
 97) download the redux devTools extension for your web ![alt text](image-151.png)
+## -----------------------------
+a) basically we are storing the state variable inside the slice and after define that slice we are keeping that slice inde the store after that we are sending that state varaible in form of store to the App component trow the Provider so that all the child component of App compoent can access those state variable.
+b) so by using the useSelecter() in child component  can access those state variable. here useSelecter() Hook  is given by react-dedux
+c) in order to change the state variable from the child compoent we need to use the useDispatch() Hook which is given by react-dedux
+d) in the useDispatcher() Hook has a funtion called as actions which is used to navigate to slice and manupulate the state variable.
+## -------------------------
 98) basically till now we have learn that how to access and change the state variable using redux but in that there in only syncrolens we are not using async, so to use the async beause when we deal with access the data from some apis then defenatially we should to the async function for that we will learn that how to access and modify the state-varible of redux in async function.
 99) ## ----------------- redux with async function ------------------------------
 100) ![alt text](<Screenshot 2024-10-15 112044.png>)
+      a) now here the middleware goes to fetch the apis so, middleware is used to fetch the datas form apis and then
+      apis will respond to this middleware 
+      b) after getting the data from apis the middleware contact to slice element.
+      c) now we are going to implement in code with aysc so for any redux the first thing to 
+         1) create is a slice
+         2) create store
+         3) create Middleware
+         4)
+      d) here the Redux is the core part and outer to it redux toolket is there which provides this all funcnality like createSlice, and other.  
 101) now that user.jsx code we will implment using the redux for that we have to again three entity of redux for this user 
-     1)   userSlice.jsx code is ![alt text](image-153.pngs)
-     2)   create userRedux.js that is redux for user this should be the first step beasue it is a reduxComponent which will access and modify the state variable, to create it copy the code of User.jsx and make some change to it.
+     1)   userSlice.jsx code is ![alt text](image-153.png)
+
+## - here the payload is nothing but that data which is fetch by middleware so middleware will fetch a data and  it shore that data  using the action so that data is called as payload, so in middleware we are doing two thing getting the data from apis and storing that data to in form of payload. then in slice we are accessing this payload to store in state variable.
+     2)   create userRedux.js that is redux for user this should be the first step beasue it is a reduxComponent which will access and modify the state variable, to create it copy the code of User.jsx and make some change to it, beause in that use we are using the synch and now are going to use the aysnc. 
      3)   now create a middleware folder to mantain all the middleware for this redux beasue this middleware are used to get the data from apis
      4)  ![alt text](image-154.png) 
      5)  store.js code  ![alt text](image-155.png) 
