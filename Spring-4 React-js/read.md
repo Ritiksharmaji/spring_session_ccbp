@@ -1295,6 +1295,7 @@ d) in the useDispatcher() Hook has a funtion called as actions which is used to 
 103) ----------------------------
 104) ## ---------------------------------------Spring_4_day_12 redux concept appy on project -------------------------------------------------
 105) for project
+106) 
     1) npm create vite@latest
     2) cd e_mart
     3) npm install
@@ -1306,15 +1307,15 @@ d) in the useDispatcher() Hook has a funtion called as actions which is used to 
     9) npm install react-router-dom ,  npm install @mui/material @emotion/react @emotion/styled, npm install @mui/icons-material , npm install react-icons
 
     10) ----------output----------------------
-    11) ![imge-219](image-219.png)
-    12) ------------------------------------------------------------------------------------------------
-    13) in this section we are going to implement the cart feacture and second thing is deeploy the applicaiton
-    14) coming to cart feacture--->
-        1)  we should able to add the items to cart , delete the item to cart.
-        2)  when we go any page from current page then it should not change the data.
-        3)  when we apply the filter, group,sorting etc also that cart should not affect.
-        4)  to show the cart with product quantity
-        5)  to show the added product on carts page.
+11) ![imge-219](image-219.png)
+12) ------------------------------------------------------------------------------------------------
+13) in this section we are going to implement the cart feacture and second thing is deeploy the applicaiton
+14) coming to cart feacture--->
+    1)  we should able to add the items to cart , delete the item to cart.
+    2)  when we go any page from current page then it should not change the data.
+    3)  when we apply the filter, group,sorting etc also that cart should not affect.
+    4)  to show the cart with product quantity
+    5)  to show the added product on carts page.
     15) now we are going to work with cart component. 
     16) now are going to appy the icons for cart and adding the plus and minus icon with default quality for each and every product uisng the productList.
     17) code of NavBar.jsx ![alt text](image-220.png)
