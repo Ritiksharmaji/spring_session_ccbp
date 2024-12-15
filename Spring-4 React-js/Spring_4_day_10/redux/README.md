@@ -248,31 +248,31 @@ State management libraries like Redux are invaluable for **large or complex Reac
 67) for both at a time --> npm i react-redux @reduxjs/toolkit
 68) ​​difference between contextapi and redux sir
 69) the Redux stored the state-variable and in redux we are not communicate with state-varaible directiy as `useState()`, in redux there is a own kinds of concept which will details with all the state-variable.
-70) ![alt text](image-133.png)
+70) ![alt text](/Spring-4%20React-js/image-133.png)
 71) to create any redux in react we need three thing
     1)  slice --> it has slice name and intial state
     2)  store --> it has store name
     3)  provider
-    4)  exa-- ![alt text](image-134.png)
-72) now the components can get the state-variable from the redux using the useSelector() ![alt text](image-135.png).
+    4)  exa-- ![alt text](/Spring-4%20React-js/image-134.png)
+72) now the components can get the state-variable from the redux using the useSelector() ![alt text](/Spring-4%20React-js/image-135.png).
 73) now we are going to apply this redux concept to our counter application for that
 74) create a folder name as redux and create two more folder in components folder name as normalComponents and reduxComponents inside the reduxComponents we are pasting the Counter with changing the name ans CounterRedux.jsx.
 75) remove all the state-varaible and business logic except to event-hanlers of state-varialbe from that CounterRedux.jsx
 76) now we are going to create those three things of redux in our applicaiton
 77) to create a slice--> we are creating a file inside the redux folder name as CounterSlice.jsx. and create a slice inside that file.
-78) code of CounterSlice.jsx ![alt text](image-136.png) 
-79) now we are creating a Store entity of redux for that create a file in that redux folder with name as store.js code is ![alt text](image-137.png)
+78) code of CounterSlice.jsx ![alt text](/Spring-4%20React-js/image-136.png) 
+79) now we are creating a Store entity of redux for that create a file in that redux folder with name as store.js code is ![alt text](/Spring-4%20React-js/image-137.png)
 80)  ​​reducer is a identifier which  is used to identify the state varaible which is availbe in slice.
-81)  now we have to create last that third entity of redux is Provider.so we will create in main.jsx file ![alt text](image-138.png)
+81)  now we have to create last that third entity of redux is Provider.so we will create in main.jsx file ![alt text](/Spring-4%20React-js/image-138.png)
 82)  now the final step is access that state-variable from compoents using the useSelecter() 
-83)  ![alt text](image-139.png) , ![alt text](image-140.png)
+83)  ![alt text](/Spring-4%20React-js/image-139.png) , ![alt text](/Spring-4%20React-js/image-140.png)
 84)  ------------output is -------------------
-85)  ![alt text](image-141.png)
+85)  ![alt text](/Spring-4%20React-js/image-141.png)
 86)  but the incresement and decremnt will not work to work them we need to communicate from componet to redux for that we need to follow below
-87)  using useDispatch hook ![alt text](image-142.png)
-88)  ![alt text](image-143.png), ![alt text](image-144.png)
+87)  using useDispatch hook ![alt text](/Spring-4%20React-js/image-142.png)
+88)  ![alt text](/Spring-4%20React-js/image-143.png), ![alt text](/Spring-4%20React-js/image-144.png)
 89)  -------output-------------------
-90)  ![alt text](image-145.png), ![alt text](image-146.png)
+90)  ![alt text](/Spring-4%20React-js/image-145.png), ![alt text](/Spring-4%20React-js/image-146.png)
 91)  ## -----------------------------end of spring_4-day_10-----------------------------------------------------------
     
 ## Q) ---------- give the sort and perfect description about the react-redux components like store, slice,provider, useSelecter(), actions, useDispatch(),middleware(), with proper exalme in react-js---------------------
