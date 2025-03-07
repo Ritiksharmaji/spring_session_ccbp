@@ -1,0 +1,38 @@
+// Import the Express module
+const express = require('express');
+
+// Create an instance of an Express application
+const app = express();
+
+// Define a port number for the server to listen on
+// Use the PORT environment variable if available; otherwise, default to port 3000
+const port = process.env.PORT || 3000;
+
+// Define a route handler for HTTP GET requests to the root URL ('/')
+app.get('/', (req, res) => {
+  // Send a 'Hello World!' response to the client
+  res.send('Hello World!');
+});
+
+app.use(express.json());
+
+app.use(function cb(req,res, next){
+    // res.send("Hello from the middleware");
+    console.log("Middleware called");
+    next() // here we are using the next() to pass the control to the next middleware 
+    // if we don't use next() then the control will not be passed to the 
+    // next middleware and the request will be stuck at this middleware only
+})
+
+
+app.get('/api/user', function(req,res){
+    console.log("/api/user api called");
+
+    res.send("User API called");
+})
+
+// Start the server and have it listen on the defined port
+app.listen(port, () => {
+  // Log a message to the console once the server is running
+  console.log(`Server is running on port ${port}`);
+});
