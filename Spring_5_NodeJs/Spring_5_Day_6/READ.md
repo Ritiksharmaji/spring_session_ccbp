@@ -1098,3 +1098,66 @@ For security reasons, **JWT + Cookies is recommended**.
 
 Would you like me to add **refresh tokens**? 🚀
 
+### --- shall we use both at same time ----------------------
+```
+ res.cookie("token", token, {
+    httpOnly: true,
+    secure: false,
+    sameSite: "lax",
+  });  and res.json({ token }); // Send token in response instead of setting cookies shall we do like this 
+
+```
+Yes, you **can** do that, but it depends on your security and implementation strategy. Let's analyze both approaches:
+
+---
+
+## ✅ **Approach 1: Setting JWT in HTTP-only Cookies (Recommended for Security)**
+```js
+res.cookie("token", token, {
+    httpOnly: true, // Prevents JavaScript access (XSS protection)
+    secure: false, // Set to true in production with HTTPS
+    sameSite: "lax", // Prevents CSRF to some extent
+});
+res.json({ message: "Login successful" });
+```
+### **🔹 Pros:**
+- **More Secure:** Prevents XSS attacks since JavaScript **cannot** access `httpOnly` cookies.
+- **Automatic Handling:** Browser automatically sends the cookie with requests.
+- **Works with Backend Sessions:** Easier to implement refresh tokens.
+
+### **🔹 Cons:**
+- Requires `withCredentials: true` in frontend requests.
+- CSRF protection is needed if not using `SameSite=Strict`.
+
+---
+
+## ✅ **Approach 2: Sending JWT in Response Instead of Cookies**
+```js
+res.json({ token });
+```
+### **🔹 Pros:**
+- **More Flexible:** Frontend can store the token anywhere (`localStorage`, `sessionStorage`, or a non-httpOnly cookie).
+- **Easier to implement on frontend** (No need for `withCredentials`).
+
+### **🔹 Cons:**
+- **Less Secure:** If stored in `localStorage` or `sessionStorage`, it is vulnerable to **XSS attacks**.
+- **Manual Handling:** Frontend must attach the token in `Authorization` headers.
+
+---
+
+## **📌 Best Practice**
+For **most secure authentication**, use **HTTP-only cookies (Approach 1)**.  
+However, if you need to **manually access the token on the frontend**, you can **combine both approaches**:
+
+```js
+res.cookie("token", token, {
+    httpOnly: true,
+    secure: false,
+    sameSite: "lax",
+});
+res.json({ token }); // Sending the token allows frontend flexibility
+```
+
+This way, the frontend **can** store the token manually if needed but also benefits from the security of **HTTP-only cookies**.
+
+Let me know if you need a full working implementation with both methods! 🚀
