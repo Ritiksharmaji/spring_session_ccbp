@@ -34,6 +34,7 @@ Redux is a state management library that is widely used with JavaScript applicat
 3. **Reducer**:
    - A reducer is a pure function that takes the current state and an action as arguments and returns a new state.
    - The reducer is responsible for determining how the state should change based on the action.
+   - 
    - Example:
      ```javascript
      const counterReducer = (state = 0, action) => {
@@ -51,6 +52,7 @@ Redux is a state management library that is widely used with JavaScript applicat
 4. **Dispatch**:
    - Dispatching an action means triggering a state change by sending an action to the reducer.
    - This is how you inform Redux that something has happened and the state may need to be updated.
+   - A method used to send actions to the store to update the state
    - Example:
      ```javascript
      store.dispatch({ type: 'INCREMENT' });
